@@ -1,3 +1,8 @@
+/**
+ * In OOP it requires interfaces. In node is much simpler.
+ * It comes in the core with the EventEmitter class
+ */
+
 const EventEmitter = require("events").EventEmitter;
 const fs = require("fs");
 
