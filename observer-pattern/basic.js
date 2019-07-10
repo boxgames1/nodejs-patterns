@@ -10,6 +10,11 @@ const findPattern = (files, regex) => {
   const emitter = new EventEmitter();
   files.forEach(file => {
     fs.readFile(file, "utf8", (err, content) => {
+      /**
+       * Cannot just throw exceptions when an error occurs,
+       * the convention is to emmit a special event called error
+       * and to pass an Error object as arg
+       */
       if (err) return emitter.emit("error", err);
       emitter.emit("fileread", file);
       let match;
