@@ -15,7 +15,7 @@ const findPattern = (files, regex) => {
   return emitter;
 };
 
-const file = "../README.md";
+const file = "README.md";
 const regex = /.*?# Node.*?/;
 
 findPattern([file], regex)
