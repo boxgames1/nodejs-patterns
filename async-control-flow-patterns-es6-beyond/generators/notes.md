@@ -9,3 +9,20 @@ function readFileThunk(filename, options){
     }
 }
 ```
+
+It allows to run async functions in a generator synchronously, like an async await and with a sequential execution.
+
+
+### Paralell execution
+
+Generators are fine for sequential, but they cant be used to parallelize execution. The workaround is using callbacks or promises using `co` library.
+
+
+### Generator-to-thunk pattern
+
+It converts a generator to a thunk in order to be able to run it in parallel or utilize it for taking advantage of other callback or promise-based control flow algorithms.
+
+
+### Limited parallel execution
+
+There are several options. Based on the previous, you can also use a Queue (callback or promise-based), async+thunkify, `co-limiter` library or implement a custom algorithm.
