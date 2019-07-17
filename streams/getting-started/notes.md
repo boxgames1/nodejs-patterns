@@ -75,3 +75,9 @@ Can be also used in readable streams.
 
 Example: back-pressure.js
 
+### Implementing Writable Streams
+
+`writer()` is called by the stream consumers
+`_writer()` must be implemented by a stream subclass.
+
+Example: toFileStream.js
