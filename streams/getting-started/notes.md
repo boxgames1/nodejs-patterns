@@ -46,3 +46,32 @@ Attaching a listener to the readable event that signals the availability of new 
 See non-flowing.js
 
 - Flowing mode 
+
+Attaching a listener to the data event. Doesn't use `read()`, but it's pushed to the data as soon as it arrives.
+
+
+### Implementing Readable Streams
+
+`read()` is called by the stream consumers
+`_read()` must be implemented by a stream subclass and should be never called directly. Underscore indicates that is a private method.
+
+Example: randomString.js
+
+### Writable streams
+
+It uses `write()` to write and `end()` to signal that no more data will be written
+
+Example: writable-server.js
+
+
+### Backpressure
+
+Streams can also suffer from botttlenecks, where data is written faster than the stream can consume it.
+To solve it, you should buffer the incoming data.
+`writable.write()` will return false when the internal buffer exceeds the `highWaterMark` limit. It indicates that the applicatioon should stop writting.
+When the buffer is emptied, the drain event is emitted, communicating that it's safe to start writting again. 
+This mechanism is called * back-pressure * 
+Can be also used in readable streams.
+
+Example: back-pressure.js
+
