@@ -81,3 +81,23 @@ Example: back-pressure.js
 `_writer()` must be implemented by a stream subclass.
 
 Example: toFileStream.js
+
+
+### Duplex Stream
+
+- Readable + Writable. 
+- Network sockets for example. 
+- Inherits the methods of both parent classes. 
+- Use `read()` and  `write()`
+- `readable` and  `drain events`
+- New option. `allowHalfOpen` (defaults to true) that if set to false will cause both parts to end if only one of them does.
+
+
+### Transform Streams
+
+- Special type of duplex streams to handle data transformations
+- In a duplex, there isn't an intermediate relationship between the parts, but Transform, applies some type of transformation to each chunk of data received from Writable.
+- Two different methods: `_transform()` and `flush()`
+
+Example: transformStream.js
+
