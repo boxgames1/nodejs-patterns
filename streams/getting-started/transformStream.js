@@ -24,9 +24,13 @@ class ReplaceStream extends stream.Transform {
   }
 }
 
-const rs = new ReplaceStream("World", "Node.js");
-rs.on("data", chunk => console.log(chunk.toString()));
-rs.write(
-  "hello Wdedw dewd ewdew wedew dew dwed World edw dewdew wWorld ewdw edwe"
-);
-rs.end();
+/* Example with Quokka
+  const rs = new ReplaceStream("World", "Node.js");
+  rs.on("data", chunk => console.log(chunk.toString()));
+  rs.write(
+    "hello Wdedw dewd ewdew wedew dew dwed World edw dewdew wWorld ewdw edwe"
+  );
+  rs.end();
+*/
+
+module.exports = ReplaceStream;

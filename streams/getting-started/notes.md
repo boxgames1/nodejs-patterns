@@ -101,3 +101,37 @@ Example: toFileStream.js
 
 Example: transformStream.js
 
+
+### Connecting streams with pipes
+
+- They work like the pipe operator in UNIX. E.g.: `echo blahblah | sed s/bla/blo/g`
+- In streams: `readable.pipe(writable, [options])` It gets the output of the readable stream and pumps up into the writable stream.
+- Writable also ends when readable emits his `end()` event (unless `{end: false}` is specified in the options)
+- Piping two streams together will create a *suction* which allow the data to flow and there is no need to control the back-presure anymore as it's automatically taken care of.
+
+Example: replace.js
+
+- Error events are not propagated automatically through the pipeline. In the following example we'll only catch errors from the `stream2` 
+
+```js
+stream1
+    .pipe(stream2)
+    .on('error', () => {})
+```
+
+### Unordered parallel execution
+
+Parallel streams cannot be used when the order in which the data is processed is important.
+
+Example: parallelStream.js and checkUrls.js
+
+
+### Unordered limitedparallel execution
+
+Similar to the previous but adding concurrency contorl.
+
+
+### Ordered parallel execution
+
+When unordered are not acceptable, we should use other techniques that involve the use of buffer to reoprder chunks whil emitted.
+NPM package `through2-parallel` is specific for this purpose
