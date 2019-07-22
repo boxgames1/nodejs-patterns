@@ -135,3 +135,12 @@ Similar to the previous but adding concurrency contorl.
 
 When unordered are not acceptable, we should use other techniques that involve the use of buffer to reoprder chunks whil emitted.
 NPM package `through2-parallel` is specific for this purpose
+
+
+### Combined streams
+
+- When writting into a combined streams, we are writing into the first stream of the pipeline.
+- When reading into a combined streams, we are reading from the last stream of the pipeline.
+- It has to capture every error in the pipeline as they are not propagated.
+
+Example: combinedStreams.js/archive.js
