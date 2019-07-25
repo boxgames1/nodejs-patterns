@@ -12,6 +12,11 @@ ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+arguments@>=1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/arguments/-/arguments-1.0.0.tgz#d4c63864545501e916f55b5179d1d1b1c41a45ad"
+  integrity sha1-1MY4ZFRVAekW9VtRedHRscQaRa0=
+
 asn1@~0.2.3:
   version "0.2.4"
   resolved "https://registry.npmjs.org/asn1/-/asn1-0.2.4.tgz#8d2475dfab553bb33e77b54e59e880bb8ce23136"
@@ -56,6 +61,18 @@ chance@^1.0.18:
   resolved "https://registry.npmjs.org/chance/-/chance-1.0.18.tgz#79788fe6fca4c338bf404321c347eecc80f969ee"
   integrity sha512-g9YLQVHVZS/3F+zIicfB58vjcxopvYQRp7xHzvyDFDhXH1aRZI/JhwSAO0X5qYiQluoGnaNAU6wByD2KTxJN1A==
 
+child_process@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/child_process/-/child_process-1.0.2.tgz#b1f7e7fc73d25e7fd1d455adc94e143830182b5a"
+  integrity sha1-sffn/HPSXn/R1FWtyU4UODAYK1o=
+
+combine@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/combine/-/combine-0.1.4.tgz#c1a23db416623ffa5fdcd6711695ce1511c91351"
+  integrity sha1-waI9tBZiP/pf3NZxFpXOFRHJE1E=
+  dependencies:
+    arguments ">=1.0.0"
+
 combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.8"
   resolved "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
@@ -68,6 +85,11 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+crypto@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/crypto/-/crypto-1.0.1.tgz#2af1b7cad8175d24c8a1b0778255794a21803037"
+  integrity sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.npmjs.org/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -79,6 +101,13 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
+
+duplexer2@^0.1.2:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/duplexer2/-/duplexer2-0.1.4.tgz#8b12dab878c0d69e3e7891051662a32fc6bddcc1"
+  integrity sha1-ixLauHjA1p4+eJEFFmKjL8a93ME=
+  dependencies:
+    readable-stream "^2.0.2"
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
@@ -245,10 +274,23 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+multipipe@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/multipipe/-/multipipe-3.0.1.tgz#54bae8f676ac8970b63dc79caddfe5f4ef819091"
+  integrity sha512-/++nApZuuB9M6TmYV7SDVl2ogDnXxYXjFiHzYxuHeqYEYVOXtIDNFp/cw+CZuhPghr0IA/qMEeed/38ZLk6s9Q==
+  dependencies:
+    duplexer2 "^0.1.2"
+    object-assign "^4.1.0"
+
 oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
+
+object-assign@^4.1.0:
+  version "4.1.1"
+  resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -289,7 +331,7 @@ qs@~6.5.2:
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
 
-readable-stream@^2.0.0:
+readable-stream@^2.0.0, readable-stream@^2.0.2:
   version "2.3.6"
   resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   integrity sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
@@ -364,6 +406,11 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
+
+stampit@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmjs.org/stampit/-/stampit-4.2.0.tgz#cba11802a232377aba7adf55e915d2f3c0ce47b3"
+  integrity sha512-icN8+Ojcc3ejo4KaSNclP+prMX4iuYQk7l7JXUyf+E+Fwpe/jTMqR2NqkUWP8PH9v4lWWsIdNkmHub1ppcshlA==
 
 string_decoder@^1.1.1:
   version "1.2.0"

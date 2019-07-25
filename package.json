@@ -4,9 +4,14 @@
     "mkdirp": "^0.5.1"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
+    "combine": "^0.1.4",
+    "crypto": "^1.0.1",
     "from2-array": "^0.0.4",
+    "multipipe": "^3.0.1",
     "request": "^2.88.0",
     "split": "^1.0.1",
+    "stampit": "^4.2.0",
     "through2": "^3.0.1"
   }
 }
