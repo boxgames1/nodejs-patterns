@@ -23,8 +23,9 @@ class FindPattern extends EventEmitter {
         if (err) return this.emit("error", err);
         this.emit("fileread", file);
         let match;
-        if ((match = content.match(regex)))
+        if ((match = content.match(this.regex))) {
           match.forEach(elem => this.emit("found", file, elem));
+        }
       });
     });
     return this; // this is needed to allow chaining
