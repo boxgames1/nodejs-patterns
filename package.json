@@ -10,7 +10,7 @@
     "combine": "^0.1.4",
     "consul": "^0.36.0",
     "crypto": "^1.0.1",
-    "ecstatic": "^4.1.2",
+    "ecstatic": "^4.1.4",
     "forever": "^1.0.0",
     "from2-array": "^0.0.4",
     "http-proxy": "^1.18.0",
