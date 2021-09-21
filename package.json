@@ -19,7 +19,7 @@
     "minimist": "^1.2.0",
     "monotonic-timestamp": "^0.0.9",
     "multipipe": "^3.0.1",
-    "object-path": "^0.11.4",
+    "object-path": "^0.11.8",
     "portfinder": "^1.0.25",
     "redis": "^2.8.0",
     "request": "^2.88.0",
