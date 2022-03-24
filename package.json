@@ -16,7 +16,7 @@
     "http-proxy": "^1.18.0",
     "ini": "^1.3.5",
     "level": "^6.0.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "monotonic-timestamp": "^0.0.9",
     "multipipe": "^3.0.1",
     "object-path": "^0.11.4",
